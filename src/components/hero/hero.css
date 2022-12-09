@@ -1,0 +1,9 @@
+.hero-container {
+  margin-top: 60px;
+}
+
+.hero-links {
+  width: 190px;
+  display: flex;
+  justify-content: space-between;
+}

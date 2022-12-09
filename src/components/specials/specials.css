@@ -1,0 +1,36 @@
+.container-fluid img {
+  max-width: 450px;
+  margin: 20px auto 30px auto;
+}
+
+.carousel-gift img {
+  margin-top: 50px;
+  max-width: 501px;
+}
+
+.carousel-card h2 {
+  width: 230px;
+}
+
+.card-links {
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5px;
+}
+
+.gift-links {
+  margin: -2px auto 50px auto;
+}
+
+.carousel-gift {
+  background-color: #1e1f22;
+}
+
+.carousel-card {
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 0, 53, 1) 0%,
+    rgba(28, 22, 96, 1) 100%
+  );
+}

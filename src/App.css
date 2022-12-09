@@ -36,3 +36,21 @@
     transform: rotate(360deg);
   }
 }
+
+.App h1 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.App h2 {
+  font-size: 18px;
+  font-weight: 400;
+  width: 300px;
+  text-align: center;
+}
+
+.App a {
+  text-decoration: none;
+  color: #2070cf;
+}

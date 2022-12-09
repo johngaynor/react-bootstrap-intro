@@ -1,0 +1,40 @@
+.device-phone {
+  background-color: #202022;
+}
+
+.device-ipad,
+.device-watch {
+  background-color: #fbfbfb;
+}
+
+.device-airpods {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 192, 241, 1) 0%,
+    rgba(1, 181, 234, 1) 100%
+  );
+}
+
+.col {
+  height: 500px;
+}
+
+.device-links {
+  width: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.col h2 {
+  margin: -5px auto 8px auto;
+}
+
+.col:nth-child(1) {
+  margin-right: 10px;
+}
+
+.device-phone img {
+  margin: auto 0;
+  margin-top: 40px;
+  min-width: 500px;
+}
