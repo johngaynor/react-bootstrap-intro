@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+# Bootstrap & React Intro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is my first project using React and Bootstrap as frameworks for an application. I modeled this site after Apple's homepage (https://www.apple.com/) to gain a better understanding of how React functions as well as how Bootstrap components work.
 
-## Available Scripts
+# Deployed Link (via Firebase)
 
-In the project directory, you can run:
+https://n322-38442.web.app
 
-### `npm start`
+# Highlights
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## React Components
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I thoroughly enjoyed learning how React uses components to load information onto a page. Lots of importing and exporting was a good refresher on file paths. An example of a simple component js file is shown below.
 
-### `npm test`
+```js
+import { Container } from "react-bootstrap";
+import styles from "./hero.css";
+import iphoneHero from "../images/iphone-hero.jpeg";
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+function Hero() {
+  return (
+    <Container fluid>
+      <h1>iPhone 14</h1>
+      <h2>Big and bigger.</h2>
+      <div>
+        <a href="#">Learn more {">"}</a>
+        <a href="#">Buy {">"}</a>{" "}
+      </div>
+      <img src={iphoneHero} alt="iphone 14" />
+    </Container>
+  );
+}
 
-### `npm run build`
+export default Hero;
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Bootstrap CSS Classes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+It took me a minute to understand how these worked but they very quickly grew on me. Bootstrap's baked in CSS classes made styling significantly easier. There were several components (such as the footer and hero sections) that hardly needed any (if at all) styling from an external stylesheet. I found a full list of classes here https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp
+that made styling much more streamlined. Below is the component shown above but with Bootstrap classes attached.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```js
+import { Container } from "react-bootstrap";
+import styles from "./hero.css";
+import iphoneHero from "../images/iphone-hero.jpeg";
 
-### `npm run eject`
+function Hero() {
+  return (
+    <Container fluid className="d-flex-column hero-container">
+      <h1>iPhone 14</h1>
+      <h2 className="mx-auto">Big and bigger.</h2>
+      <div className="hero-links mx-auto">
+        <a href="#">Learn more {">"}</a>
+        <a href="#">Buy {">"}</a>{" "}
+      </div>
+      <img src={iphoneHero} alt="iphone 14" className="my-4" />
+    </Container>
+  );
+}
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+export default Hero;
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Problems Encountered
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Prior to discovering Bootstrap's classes I struggled to style a lot of the components. There was default styling attached (like padding on the sides) that I couldn't overwrite with my own CSS using typical methods (margin, padding, position). Most of these issues were fixable with Bootstrap classes.
+2. I am still new to Bootstrap so there are probably some instances that could be solved in less lines of code. I intend on doing a full comprehensive study of Bootstrap classes prior to my next project to optimize my class usage for more streamlined developing.
